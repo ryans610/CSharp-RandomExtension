@@ -84,7 +84,7 @@ namespace System.RandomExtension
         /// Returns a random byte that is less than the specified maximum.
         /// </summary>
         /// <param name="rand">A random number generator.</param>
-        /// <param name="maxValue">The exclusive upper bound of the random number returned. maxValue must be greater than or equal to minValue.</param>
+        /// <param name="maxValue">The exclusive upper bound of the random number returned. maxValue must be greater than or equal to 0.</param>
         /// <returns>A 8-bit unsigned integer that is greater than or equal to 0 and less than maxValue; that is, the range of return values ordinarily inclueds 0 but not maxValue. However, if maxValue equals 0, maxValue is return.</returns>
         public static byte NextByte(this Random rand, byte maxValue)
         {
@@ -119,7 +119,7 @@ namespace System.RandomExtension
         /// Returns a non-negative random sbyte that is less than the specified maximum.
         /// </summary>
         /// <param name="rand">A random number generator.</param>
-        /// <param name="maxValue">The exclusive upper bound of the random number returned. maxValue must be greater than or equal to minValue.</param>
+        /// <param name="maxValue">The exclusive upper bound of the random number returned. maxValue must be greater than or equal to 0.</param>
         /// <returns>A 8-bit signed integer that is greater than or equal to 0 and less than maxValue; that is, the range of return values ordinarily inclueds 0 but not maxValue. However, if maxValue equals 0, maxValue is return.</returns>
         public static sbyte NextSByte(this Random rand, sbyte maxValue)
         {
@@ -156,7 +156,7 @@ namespace System.RandomExtension
         /// Returns a non-negative random short that is less than the specified maximum.
         /// </summary>
         /// <param name="rand">A random number generator.</param>
-        /// <param name="maxValue">The exclusive upper bound of the random number returned. maxValue must be greater than or equal to minValue.</param>
+        /// <param name="maxValue">The exclusive upper bound of the random number returned. maxValue must be greater than or equal to 0.</param>
         /// <returns>A 16-bit signed integer that is greater than or equal to 0 and less than maxValue; that is, the range of return values ordinarily inclueds 0 but not maxValue. However, if maxValue equals 0, maxValue is return.</returns>
         public static short NextShort(this Random rand, short maxValue)
         {
@@ -193,7 +193,7 @@ namespace System.RandomExtension
         /// Returns a random ushort that is less than the specified maximum.
         /// </summary>
         /// <param name="rand">A random number generator.</param>
-        /// <param name="maxValue">The exclusive upper bound of the random number returned. maxValue must be greater than or equal to minValue.</param>
+        /// <param name="maxValue">The exclusive upper bound of the random number returned. maxValue must be greater than or equal to 0.</param>
         /// <returns>A 16-bit unsigned integer that is greater than or equal to 0 and less than maxValue; that is, the range of return values ordinarily inclueds 0 but not maxValue. However, if maxValue equals 0, maxValue is return.</returns>
         public static ushort NextUShort(this Random rand, ushort maxValue)
         {
@@ -230,7 +230,7 @@ namespace System.RandomExtension
         /// Returns a random uint that is less than the specified maximum.
         /// </summary>
         /// <param name="rand">A random number generator.</param>
-        /// <param name="maxValue">The exclusive upper bound of the random number returned. maxValue must be greater than or equal to minValue.</param>
+        /// <param name="maxValue">The exclusive upper bound of the random number returned. maxValue must be greater than or equal to 0.</param>
         /// <returns>A 32-bit unsigned integer that is greater than or equal to 0 and less than maxValue; that is, the range of return values ordinarily inclueds 0 but not maxValue. However, if maxValue equals 0, maxValue is return.</returns>
         public static uint NextUInt(this Random rand, uint maxValue)
         {
@@ -275,7 +275,7 @@ namespace System.RandomExtension
         /// Returns a non-negative random long that is less than the specified maximum.
         /// </summary>
         /// <param name="rand">A random number generator.</param>
-        /// <param name="maxValue">The exclusive upper bound of the random number returned. maxValue must be greater than or equal to minValue.</param>
+        /// <param name="maxValue">The exclusive upper bound of the random number returned. maxValue must be greater than or equal to 0.</param>
         /// <returns>A 64-bit signed integer that is greater than or equal to 0 and less than maxValue; that is, the range of return values ordinarily inclueds 0 but not maxValue. However, if maxValue equals 0, maxValue is return.</returns>
         public static long NextLong(this Random rand, long maxValue)
         {
@@ -325,7 +325,7 @@ namespace System.RandomExtension
         /// Returns a random ulong that is less than the specified maximum.
         /// </summary>
         /// <param name="rand">A random number generator.</param>
-        /// <param name="maxValue">The exclusive upper bound of the random number returned. maxValue must be greater than or equal to minValue.</param>
+        /// <param name="maxValue">The exclusive upper bound of the random number returned. maxValue must be greater than or equal to 0.</param>
         /// <returns>A 64-bit unsigned integer that is greater than or equal to 0 and less than maxValue; that is, the range of return values ordinarily inclueds 0 but not maxValue. However, if maxValue equals 0, maxValue is return.</returns>
         public static ulong NextULong(this Random rand, ulong maxValue)
         {
