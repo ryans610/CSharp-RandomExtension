@@ -24,6 +24,7 @@ using System.RandomExtension;
 All extension method can be use like default method of System.Random, for example:
 ```C#
 Random rnd = new Random();
+//Random rnd = new Random(seed);    //with seed
 int randomInt = rnd.Next();
 ulong randomULong = rnd.NextULong();
 sbyte randomSByte = rnd.NextSByte(50);
@@ -83,6 +84,7 @@ namespace RandomExtensionExample
         public static void Main()
         {
             MyRandom() rnd = new MyRandom();
+            //MyRandom rnd = new MyRandom(seed);    //with seed
             byte b = rnd.NextByte();    //100
         }
     }
@@ -115,7 +117,7 @@ public double NextDouble(
 > minValue is greater than maxValue.
 
 ### Summary
-Returns a random floating-point number that is range from minValue to maxValue. If maxValue equals minValue, the method returns minValue. NextDouble() from System.Random is used.
+The NextDouble(Double, Double) overload returns a random floating-point number that is greater than or equal to minValue, and less than maxValue. If maxValue equals minValue, the method returns minValue. NextDouble() from System.Random is used.
 
 ## NextFloat()
 ```C#
@@ -126,7 +128,7 @@ public float NextFloat()
 > A single-precision floating point number that is greater than or equal to 0.0f, and less than 1.0f.
 
 ### Summary
-Returns a random floating-point number that is range from 0.0f to 1.0f. NextDouble() from System.Random is used.
+The NextFloat() extend method returns a random floating-point number that is greater than or equal to 0.0f, and less than 1.0f. NextDouble() from System.Random is used. To retrieve random floating point values within a range other than 0.0f and 1.0f, use the NextFloat(Float, Float) method overload.
 
 ## NextFloat(Float, Float)
 ```C#
@@ -153,7 +155,7 @@ public float NextFloat(
 > minValue is greater than maxValue.
 
 ### Summary
-Returns a random floating-point number that is range from minValue to maxValue. If maxValue equals minValue, the method returns minValue. NextDouble() from System.Random is used.
+The NextFloat(Float, Float) overload returns a random floating-point number that is greater than or equal to minValue, and less than maxValue. If maxValue equals minValue, the method returns minValue. NextDouble() from System.Random is used.
 
 ## NextDecimal()
 ```C#
@@ -164,7 +166,7 @@ public decimal NextDecimal()
 > A decimal number that is greater than or equal to 0.0m, and less than 1.0m.
 
 ### Summary
-Returns a random decimal number that is range from 0.0m to 1.0m. Next(Int32) from System.Random is used.
+The NextDecimal() extend method returns a random decimal number that is greater than or equal to 0.0m, and less than 1.0m. Next(Int32) from System.Random is used. To retrieve random decimal values within a range other than 0.0m and 1.0m, use the NextDecimal(Decimal, Decimal) method overload.
 
 ## NextDecimal(Decimal, Decimal)
 ```C#
@@ -191,4 +193,60 @@ public decimal NextDecimal(
 > minValue is greater than maxValue.
 
 ### Summary
-Returns a random decimal number that is range from minValue to maxValue. If maxValue equals minValue, the method returns minValue. Next(Int32) from System.Random is used.
+The NextDecimal(Decimal, Decimal) overload returns a random decimal number that is greater than or equal to minValue, and less than maxValue. If maxValue equals minValue, the method returns minValue. Next(Int32) from System.Random is used.
+
+## NextByte()
+```C#
+public byte NextByte()
+```
+### Return
+> Type: System.Byte  
+> A 8-bit unsigned integer that is greater than or equal to 0 and less than MaxValue.
+
+### Summary
+The NextByte() extend method returns a random byte number that is range from 0 to Byte.MaxValue-1. Next(Int32) from System.Random is used. To generate a random byte number whose value ranges from 0 to some other positive byte number, use the NextByte(Byte) method overload. To generate a random byte number within a different range, use the NextByte(Byte, Byte) method overload.
+
+## NextByte(Byte)
+```C#
+public byte NextByte(
+    byte maxValue
+)
+```
+### Parameter
+*maxValue*
+> Type: System.Byte  
+> The exclusive upper bound of the random number returned. maxValue must be greater than or equal to 0.
+
+### Return
+> Type: System.Byte  
+> A 8-bit unsigned integer that is greater than or equal to 0 and less than maxValue; that is, the range of return values ordinarily inclueds 0 but not maxValue. However, if maxValue equals 0, maxValue is return.
+
+### Summary
+The NextByte(Byte) overload returns a random byte number that is range from 0 to maxValue-1. If maxValue is 0, the method returns 0. Next(Int32) from System.Random is used.
+
+## NextByte(Byte, Byte)
+```C#
+public byte NextByte(
+    byte minValue,
+    byte maxValue
+)
+```
+### Parameter
+*minValue*
+> Type: System.Byte  
+> The inclusive lower bound of the random number returned.
+
+*maxValue*
+> Type: System.Byte  
+> The exclusive upper bound of the random number returned. maxValue must be greater than or equal to minValue.
+
+### Return
+> Type: System.Byte  
+> A 8-bit unsigned integer greater than or equal to minValue and less than maxValue; that is, the range of return values includes minValue but not maxValue. If minValue equals maxValue, minValue is returned.
+
+### Exception
+**ArgumentOutOfRangeException**
+> minValue is greater than maxValue.
+
+### Summary
+The NextByte(Byte, Byte) overload returns a random byte number that is range from minValue to maxValue. If maxValue equals minValue, the method returns minValue. Next(Int32, Int32) from System.Random is used.
