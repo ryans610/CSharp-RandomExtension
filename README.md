@@ -100,15 +100,20 @@ public double NextDouble(
 )
 ```
 **Parameter**
+
 *minValue*
-    Type: System.Double
-    The inclusive lower bound of the random number returned.
+> Type: System.Double  
+> The inclusive lower bound of the random number returned.
+
 *maxValue*
-    Type: System.Double
-    The exclusive upper bound of the random number returned. maxValue must be greater than or equal to minValue.
+> Type: System.Double  
+> The exclusive upper bound of the random number returned. maxValue must be greater than or equal to minValue.
+
 **Return**
-Type: System.Double
-A double-precision floating point number that is greater than or equal to minValue, and less than maxValue.
+> Type: System.Double  
+> A double-precision floating point number that is greater than or equal to minValue, and less than maxValue.
+
 **Exception**
+
 *ArgumentOutOfRangeException*
-- minValue is greater than maxValue.
+> minValue is greater than maxValue.
