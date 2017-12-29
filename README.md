@@ -91,16 +91,15 @@ namespace RandomExtensionExample
 }
 ```
 
-## Document of All Method
-### NextDouble(Double, Double)
+# Document of All Method
+## NextDouble(Double, Double)
 ```C#
 public double NextDouble(
     double minValue,
     double maxValue
 )
 ```
-**Parameter**
-
+### Parameter
 *minValue*
 > Type: System.Double  
 > The inclusive lower bound of the random number returned.
@@ -109,11 +108,10 @@ public double NextDouble(
 > Type: System.Double  
 > The exclusive upper bound of the random number returned. maxValue must be greater than or equal to minValue.
 
-**Return**
+### Return
 > Type: System.Double  
 > A double-precision floating point number that is greater than or equal to minValue, and less than maxValue.
 
-**Exception**
-
-*ArgumentOutOfRangeException*
+### Exception
+**ArgumentOutOfRangeException**
 > minValue is greater than maxValue.
