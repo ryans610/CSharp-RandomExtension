@@ -33,7 +33,7 @@ For more detail, see document in ***Document of All Method*** section below.
 
 ### List of Extension Method of System.Random
 ```C#
-public double NextDouble(double minValue, double maxValue)
+[public double NextDouble(double minValue, double maxValue)](#NextDouble(Double, Double))
 public float NextFloat()
 public float NextFloat(float minValue, float maxValue)
 public decimal NextDecimal()
@@ -115,3 +115,6 @@ public double NextDouble(
 ### Exception
 **ArgumentOutOfRangeException**
 > minValue is greater than maxValue.
+
+### Summary
+Returns a random floating-point number that is range from minValue to maxValue. NextDouble() from System.Random is used.
