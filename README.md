@@ -85,7 +85,7 @@ namespace RandomExtensionExample
         {
             MyRandom() rnd = new MyRandom();
             //MyRandom rnd = new MyRandom(seed);    //with seed
-            byte b = rnd.NextByte();    //100
+            byte b = rnd.NextByte(0, 50);    //100
         }
     }
 }
@@ -106,18 +106,18 @@ public double NextDouble(
 
 *maxValue*
 > Type: System.Double  
-> The exclusive upper bound of the random number returned. maxValue must be greater than or equal to minValue.
+> The exclusive upper bound of the random number returned. *maxValue* must be greater than or equal to *minValue*.
 
 ### Return
 > Type: System.Double  
-> A double-precision floating point number that is greater than or equal to minValue, and less than maxValue.
+> A double-precision floating point number that is greater than or equal to *minValue*, and less than *maxValue*.
 
 ### Exception
 **ArgumentOutOfRangeException**
-> minValue is greater than maxValue.
+> *minValue* is greater than *maxValue*.
 
 ### Summary
-The NextDouble(Double, Double) overload returns a random floating-point number that is greater than or equal to minValue, and less than maxValue. If maxValue equals minValue, the method returns minValue. NextDouble() from System.Random is used.
+The NextDouble(Double, Double) overload returns a random floating-point number that is greater than or equal to *minValue*, and less than *maxValue*. If *maxValue* equals *minValue*, the method returns *minValue*. NextDouble() from System.Random is used.
 
 ## NextFloat()
 ```C#
@@ -144,18 +144,18 @@ public float NextFloat(
 
 *maxValue*
 > Type: System.Single  
-> The exclusive upper bound of the random number returned. maxValue must be greater than or equal to minValue.
+> The exclusive upper bound of the random number returned. *maxValue* must be greater than or equal to *minValue*.
 
 ### Return
 > Type: System.Single  
-> A single-precision floating point number that is greater than or equal to minValue, and less than maxValue.
+> A single-precision floating point number that is greater than or equal to *minValue*, and less than *maxValue*.
 
 ### Exception
 **ArgumentOutOfRangeException**
-> minValue is greater than maxValue.
+> *minValue* is greater than *maxValue*.
 
 ### Summary
-The NextFloat(Float, Float) overload returns a random floating-point number that is greater than or equal to minValue, and less than maxValue. If maxValue equals minValue, the method returns minValue. NextDouble() from System.Random is used.
+The NextFloat(Float, Float) overload returns a random floating-point number that is greater than or equal to *minValue*, and less than *maxValue*. If *maxValue* equals *minValue*, the method returns *minValue*. NextDouble() from System.Random is used.
 
 ## NextDecimal()
 ```C#
@@ -182,18 +182,18 @@ public decimal NextDecimal(
 
 *maxValue*
 > Type: System.Decimal  
-> The exclusive upper bound of the random number returned. maxValue must be greater than or equal to minValue.
+> The exclusive upper bound of the random number returned. *maxValue* must be greater than or equal to *minValue*.
 
 ### Return
 > Type: System.Decimal  
-> A decimal number that is greater than or equal to minValue, and less than maxValue.
+> A decimal number that is greater than or equal to *minValue*, and less than *maxValue*.
 
 ### Exception
 **ArgumentOutOfRangeException**
-> minValue is greater than maxValue.
+> *minValue* is greater than *maxValue*.
 
 ### Summary
-The NextDecimal(Decimal, Decimal) overload returns a random decimal number that is greater than or equal to minValue, and less than maxValue. If maxValue equals minValue, the method returns minValue. Next(Int32) from System.Random is used.
+The NextDecimal(Decimal, Decimal) overload returns a random decimal number that is greater than or equal to *minValue*, and less than *maxValue*. If *maxValue* equals *minValue*, the method returns *minValue*. Next(Int32) from System.Random is used.
 
 ## NextByte()
 ```C#
@@ -215,14 +215,14 @@ public byte NextByte(
 ### Parameter
 *maxValue*
 > Type: System.Byte  
-> The exclusive upper bound of the random number returned. maxValue must be greater than or equal to 0.
+> The exclusive upper bound of the random number returned. *maxValue* must be greater than or equal to 0.
 
 ### Return
 > Type: System.Byte  
-> A 8-bit unsigned integer that is greater than or equal to 0 and less than maxValue; that is, the range of return values ordinarily inclueds 0 but not maxValue. However, if maxValue equals 0, maxValue is return.
+> A 8-bit unsigned integer that is greater than or equal to 0 and less than *maxValue*; that is, the range of return values ordinarily inclueds 0 but not *maxValue*. However, if *maxValue* equals 0, *maxValue* is return.
 
 ### Summary
-The NextByte(Byte) overload returns a random byte number that is range from 0 to maxValue-1. If maxValue is 0, the method returns 0. Next(Int32) from System.Random is used.
+The NextByte(Byte) overload returns a random byte number that is range from 0 to *maxValue*-1. If *maxValue* is 0, the method returns 0. Next(Int32) from System.Random is used.
 
 ## NextByte(Byte, Byte)
 ```C#
@@ -238,15 +238,135 @@ public byte NextByte(
 
 *maxValue*
 > Type: System.Byte  
-> The exclusive upper bound of the random number returned. maxValue must be greater than or equal to minValue.
+> The exclusive upper bound of the random number returned. *maxValue* must be greater than or equal to *minValue*.
 
 ### Return
 > Type: System.Byte  
-> A 8-bit unsigned integer greater than or equal to minValue and less than maxValue; that is, the range of return values includes minValue but not maxValue. If minValue equals maxValue, minValue is returned.
+> A 8-bit unsigned integer greater than or equal to *minValue* and less than *maxValue*; that is, the range of return values includes *minValue* but not *maxValue*. If *minValue* equals *maxValue*, *minValue* is returned.
 
 ### Exception
 **ArgumentOutOfRangeException**
-> minValue is greater than maxValue.
+> *minValue* is greater than *maxValue*.
 
 ### Summary
-The NextByte(Byte, Byte) overload returns a random byte number that is range from minValue to maxValue. If maxValue equals minValue, the method returns minValue. Next(Int32, Int32) from System.Random is used.
+The NextByte(Byte, Byte) overload returns a random byte number that is range from *minValue* to *maxValue*. If *maxValue* equals *minValue*, the method returns *minValue*. Next(Int32, Int32) from System.Random is used.
+
+## NextSByte()
+```C#
+public sbyte NextSByte()
+```
+### Return
+> Type: System.SByte  
+> A 8-bit signed integer that is greater than or equal to 0 and less than MaxValue.
+
+### Summary
+The NextSByte() extend method returns a random sbyte number that is range from 0 to SByte.MaxValue-1. Next(Int32) from System.Random is used. To generate a random sbyte number whose value ranges from 0 to some other positive sbyte number, use the NextSByte(SByte) method overload. To generate a random sbyte number within a different range, use the NextSByte(SByte, SByte) method overload.
+
+## NextSByte(SByte)
+```C#
+public sbyte NextSByte(
+    sbyte maxValue
+)
+```
+### Parameter
+*maxValue*
+> Type: System.SByte  
+> The exclusive upper bound of the random number returned. *maxValue* must be greater than or equal to 0.
+
+### Return
+> Type: System.SByte  
+> A 8-bit signed integer that is greater than or equal to 0 and less than *maxValue*; that is, the range of return values ordinarily inclueds 0 but not *maxValue*. However, if *maxValue* equals 0, *maxValue* is return.
+
+### Exception
+**ArgumentOutOfRangeException**
+> *maxValue* is less than 0.
+
+### Summary
+The NextSByte(SByte) overload returns a random sbyte number that is range from 0 to *maxValue*-1. If *maxValue* is 0, the method returns 0. Next(Int32) from System.Random is used.
+
+## NextSByte(SByte, SByte)
+```C#
+public sbyte NextSByte(
+    sbyte minValue,
+    sbyte maxValue
+)
+```
+### Parameter
+*minValue*
+> Type: System.SByte  
+> The inclusive lower bound of the random number returned.
+
+*maxValue*
+> Type: System.SByte  
+> The exclusive upper bound of the random number returned. *maxValue* must be greater than or equal to *minValue*.
+
+### Return
+> Type: System.SByte  
+> A 8-bit signed integer greater than or equal to *minValue* and less than *maxValue*; that is, the range of return values includes *minValue* but not *maxValue*. If *minValue* equals *maxValue*, *minValue* is returned.
+
+### Exception
+**ArgumentOutOfRangeException**
+> *minValue* is greater than *maxValue*.
+
+### Summary
+The NextSByte(SByte, SByte) overload returns a random sbyte number that is range from *minValue* to *maxValue*. If *maxValue* equals *minValue*, the method returns *minValue*. Next(Int32, Int32) from System.Random is used.
+
+## NextShort()
+```C#
+public short NextShort()
+```
+### Return
+> Type: System.Int16  
+> A 16-bit signed integer that is greater than or equal to 0 and less than MaxValue.
+
+### Summary
+The NextShort() extend method returns a random short number that is range from 0 to Int16.MaxValue-1. Next(Int32) from System.Random is used. To generate a random short number whose value ranges from 0 to some other positive short number, use the NextShort(Int16) method overload. To generate a random short number within a different range, use the NextShort(Int16, Int16) method overload.
+
+## NextShort(Int16)
+```C#
+public short NextShort(
+    short maxValue
+)
+```
+### Parameter
+*maxValue*
+> Type: System.Int16  
+> The exclusive upper bound of the random number returned. *maxValue* must be greater than or equal to 0.
+
+### Return
+> Type: System.Int16  
+> A 16-bit signed integer that is greater than or equal to 0 and less than *maxValue*; that is, the range of return values ordinarily inclueds 0 but not *maxValue*. However, if *maxValue* equals 0, *maxValue* is return.
+
+### Exception
+**ArgumentOutOfRangeException**
+> *maxValue* is less than 0.
+
+### Summary
+The NextShort(Int16) overload returns a random short number that is range from 0 to *maxValue*-1. If *maxValue* is 0, the method returns 0. Next(Int32) from System.Random is used.
+
+## NextShort(Int16, Int16)
+```C#
+public short NextShort(
+    short minValue,
+    short maxValue
+)
+```
+### Parameter
+*minValue*
+> Type: System.Int16  
+> The inclusive lower bound of the random number returned.
+
+*maxValue*
+> Type: System.Int16  
+> The exclusive upper bound of the random number returned. *maxValue* must be greater than or equal to *minValue*.
+
+### Return
+> Type: System.Int16  
+> A 16-bit signed integer greater than or equal to *minValue* and less than *maxValue*; that is, the range of return values includes *minValue* but not *maxValue*. If *minValue* equals *maxValue*, *minValue* is returned.
+
+### Exception
+**ArgumentOutOfRangeException**
+> *minValue* is greater than *maxValue*.
+
+### Summary
+The NextShort(Int16, Int16) overload returns a random short number that is range from *minValue* to *maxValue*. If *maxValue* equals *minValue*, the method returns *minValue*. Next(Int32, Int32) from System.Random is used.
