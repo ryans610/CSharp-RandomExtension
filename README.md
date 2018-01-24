@@ -1,4 +1,10 @@
 # CSharp-RandomExtension
+
+[![GitHub release](https://img.shields.io/github/release/ryans610/CSharp-RandomExtension.svg)](https://github.com/ryans610/CSharp-RandomExtension/releases)
+[![GitHub license](https://img.shields.io/github/license/ryans610/CSharp-RandomExtension.svg?style=plastic)](https://github.com/ryans610/CSharp-RandomExtension/blob/master/LICENSE)
+[![Nuget version](https://img.shields.io/nuget/v/RandomExtension.svg)](https://www.nuget.org/packages/RandomExtension/)
+[![Nuget download](https://img.shields.io/nuget/dt/RandomExtension.svg)](https://www.nuget.org/packages/RandomExtension/)
+
 A light weight C# extension of random method for all numeric type.
 
 ## Language and Framework
